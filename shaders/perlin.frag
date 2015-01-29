@@ -41,7 +41,7 @@ float gradMaroto(float index, float x, float y, float z)
 	return ((isOdd) ? -a : a) + (((hash / 2) & 1) == 1 ? -b : b);
 }
 
-// Ideally we should use mod of 256, however we would need to keep a permutation vector and random asscess to memory can make
+// Ideally we should use mod of 256, however we would need to keep a permutation vector and random asscess to memory that can make
 //the shader really slow, so let's use mod 289 and still get awesome textures.
 float mod289(float x)
 {
@@ -57,17 +57,17 @@ float permute(float x)
 
 
 float noise(float x, float y, float z) {
-	// Find the unit cube that contains the point
+	// Save the integer part
 	float X = mod289(floor(x));
 	float Y = mod289(floor(y));
 	float Z = mod289(floor(z));
 
-	// Find relative x, y,z of point in cube
+	// The fractional part
 	x = fract(x);
 	y = fract(y);
 	z = fract(z);
 
-	// Compute fade curves for each of x, y, z
+	// Compute sCurve for each dimension
 	float sx = sCurve(x);
 	float sy = sCurve(y);
 	float sz = sCurve(z);
