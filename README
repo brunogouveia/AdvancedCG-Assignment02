@@ -1,0 +1,21 @@
+hw03: Procedural Textures
+
+Bruno Henrique Gouveia
+
+I implemented a spiral procedural texture and a noisy texture using Perlin noise.
+
+Demonstrates stored ad procedural textures using the
+brick and mandelbrot shaders.
+
+Key bindings
+  m/M        Cycle through shaders
+  o/O        Cycle through objects
+  p/P        Toggle between orthogonal & perspective projection
+  s/S        Start/stop light
+  X/Y/Z      Change mandelbrot parameters
+  -/+        Change light elevation
+  a          Toggle axes
+  arrows     Change view angle
+  PgDn/PgUp  Zoom in and out
+  0          Reset view angle
+  ESC        Exit
